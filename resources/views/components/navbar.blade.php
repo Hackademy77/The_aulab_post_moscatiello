@@ -39,7 +39,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false"> Benvenuto Ospite</a>
                         <ul class="dropdown-menu" aria-Labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-                            <li><a class="dropdown-item" href="{froute('login')}}">Accedi</a></li>
+                            <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
                         </ul>
                     </li>
                 @endguest
@@ -61,25 +61,24 @@
                 <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li>
-                {{-- @if (Auth::user()->is_admin)
-                    <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
-                @endif
-                @if (Auth::user()->is_revisor)
-                    <li><a class="dropdown-item" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
-                @endif
-                @if (Auth::user()->is_writer)
-                    <li><a class="dropdown-item" href="{{ route('writer.dashboard') }}">Dashboard del redattore</a></li>
-                @endif --}}
+                @auth
+                    @if (Auth::user()->is_admin)
+                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                    @endif
+                    @if (Auth::user()->is_revisor)
+                        <li><a class="dropdown-item" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
+                    @endif
+                    @if (Auth::user()->is_writer)
+                        <li><a class="dropdown-item" href="{{ route('writer.dashboard') }}">Dashboard del redattore</a></li>
+                    @endif
+                @endauth
                 <form class="d-flex" method="GET" action="{{ route('article.search') }}">
                     <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?"
                         aria-Label="Search">
                     <button class="btn btn-outline-info" type="submit">Cerca</button>
                 </form>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
     </div>
 </nav>

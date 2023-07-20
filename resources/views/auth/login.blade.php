@@ -12,7 +12,7 @@
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul> 
-                            @foreach (Serrors->all() as $error)
+                            @foreach ($errors->all() as $error)
                                <li>{{ $error }}</li>
                             @endforeach
                         </ul>
@@ -31,11 +31,12 @@
                     </div>
                     <div class="mt-2">
                         <button class="btn btn-info text-white">Accedi</button>
-                        <p class="small mt-2">Non sei registrato? <a href="{{route('register')}}">Clicca qui</a></p>
+                        
                     </div>
+                    <p class="small mt-2">Non sei registrato? <a href="{{route('register')}}">Clicca qui</a></p>  
                 </form>
             </div>
         </div>
     </div>
-</x-layout
+</x-layout>
 
