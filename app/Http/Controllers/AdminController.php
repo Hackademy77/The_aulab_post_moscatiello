@@ -31,6 +31,7 @@ class AdminController extends Controller
     }
    
     public function setWriter(User $user){
+        
         $user->update([
             'is_writer' => true,
         ]);

@@ -23,13 +23,13 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'is_revisor',
-        'is writer',
+        'is_writer',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var array<int,string>
      */
     protected $hidden = [
         'password',
