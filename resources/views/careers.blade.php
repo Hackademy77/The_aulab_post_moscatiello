@@ -27,7 +27,7 @@
             <form class="p-5" action="{{route('careers.submit')}}" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for=role class=form-label>per quale ruolo t stal canaidandor</Label>
+                    <label for=role class=form-label>per quale ruolo ti stai candidando?</Label>
                     <select name="role" id="role-id" class="form-control">
                         <option value="">Scegli qui</option>
                         <option value="admin">administrator</option>

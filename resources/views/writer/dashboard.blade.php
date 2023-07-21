@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
             <div class="co1-12">
                 <h2>Articoli in fase di revisione</h2> 
-                 <x-requests-table :articles="$unrevisionedArticles"/>
+                 <x-writer-articles-table :articles="$unrevisionedArticles"/>
             </div>
         </div>
     </div>
@@ -33,9 +33,9 @@
              <div class="row justify-content-center" >
                 <div class="co1-12">
                     <h2>Articoli respinti</h2> 
-                    <x-requests-table :articles="$rejectedArticles"/> 
+                    <x-writer-articles-table :articles="$rejectedArticles"/> 
                 </div>
             </div>
         </div>
     </div>
-    
+</x-layout>

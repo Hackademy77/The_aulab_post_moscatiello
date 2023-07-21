@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WriterController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 
 
@@ -25,6 +27,7 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
+Route::get('/article/user/{user}',[ArticleController::class,'byUser'])->name('article.byUser');
 
 Route::middleware('admin')->group(function(){
     Route::get ('/admin/dashboard', [AdminController::class,'dashboard'])->name('admin.dashboard');

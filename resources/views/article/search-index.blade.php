@@ -12,7 +12,7 @@
             @foreach($articles as $article)
             <div class="co1-12 col-md-3 my-2">
                 <div class="card">
-                    <img src="{{Storage: :url($article->image)}}" cLass="card-img-top" alt="...">
+                    <img src="{{Storage::url($article->image)}}" cLass="card-img-top" alt="...">
                     <div class="card-bodv">
                         <h5 cLass="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
