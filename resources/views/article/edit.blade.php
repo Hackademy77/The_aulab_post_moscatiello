@@ -42,14 +42,16 @@
                         <label for="category" cLass="form-label">Categoria:</label>
                         <select name="category" id="category" class="form-control text-capitalize">
                             @foreach($categories as $category)
-                            <option value="{{$category->id}}" @if($article->category && $category-id == $article->category->id) selected @endif>{{$category->name}}</option>
+                            <option value="{{$category->id}}" 
+                                @if($article->category && $category->id == $article->category->id) selected
+                                 @endif>{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <label for="body" cLass="form-label">Corpo del testo:</label>
-                        <textarea name="body" id="body" cols="30" rows="7" cLass="form-control"≥{{$article->body}}</textarea>
+                        <textarea name="body" id="body" cols="30" rows="7" cLass="form-control">{{$article->body}}</textarea>
                     </div>
                     
                     <div class="mb-3">
