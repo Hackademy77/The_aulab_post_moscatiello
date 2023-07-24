@@ -44,7 +44,7 @@
                             @foreach($categories as $category)
                             <option value="{{$category->id}}" 
                                 @if($article->category && $category->id == $article->category->id) selected
-                                 @endif>{{$category->name}}</option>
+                                 @endif >{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
